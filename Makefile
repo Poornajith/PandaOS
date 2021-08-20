@@ -1,4 +1,4 @@
- OBJECTS = loader.o kmain.o
+ OBJECTS = loader.o kmain.o idt.s interrupt.c interrupt.h interrupt_handlers.c interrupt_handlers.h keyboard.c keyboard.h
     CC = gcc
     CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
              -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c
