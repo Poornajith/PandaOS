@@ -17,6 +17,12 @@
       //serial_write(arr, 20);
       segments_install_gdt();
       interrupts_install_idt();
+        
+       void init(){
+       segments_install_gdt();
+       interrupts_install_idt();
+       init_paging();
+         }
 
       multiboot_info_t *mbinfo = (multiboot_info_t *) ebx;
       multiboot_module_t* modules = (multiboot_module_t*) mbinfo->mods_addr; 
